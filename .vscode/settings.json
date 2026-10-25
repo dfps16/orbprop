@@ -1,3 +1,9 @@
 {
-    "cmake.sourceDirectory": "/Users/dfps16/orbprop/hello"
+    "cmake.sourceDirectory": "/Users/dfps16/orbprop/hello",
+    "editor.fontLigatures": false,
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.runAutomatically": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }
