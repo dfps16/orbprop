@@ -1,0 +1,17 @@
+[project]
+name = "orbprop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Diego Paniagua Silva", email = "dfps1u24@soton.ac.uk" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+orbprop = "orbprop:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
