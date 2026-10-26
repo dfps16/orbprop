@@ -14,4 +14,8 @@ namespace orbprop {
         const double r_cubed = r_norm * r_norm * r_norm;
         return (-mu / r_cubed) * r;
     }
+
+    State TwoBodyDerivative(const State& s, double mu) {
+        return {s.v, TwoBodyAcceleration(s.r, mu)};
+    };
 } // namespace orbprop
