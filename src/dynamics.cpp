@@ -17,5 +17,13 @@ namespace orbprop {
 
     State TwoBodyDerivative(const State& s, double mu) {
         return {s.v, TwoBodyAcceleration(s.r, mu)};
-    };
+    }
+
+    double SpecificEnergy(const State& s, double mu) {
+        return 0.5 * Dot(s.v, s.v) - mu / Norm(s.r);
+    }
+
+    Vec3 SpecificAngularMomentum(const State& s) { 
+        return Cross(s.r, s.v); 
+    }
 } // namespace orbprop

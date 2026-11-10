@@ -26,6 +26,7 @@ FetchContent_MakeAvailable(Catch2)
 add_executable(tests
     tests/test_dynamics.cpp
     tests/test_vec3.cpp
+    tests/test_rk4.cpp
 )
 target_link_libraries(tests PRIVATE orbprop Catch2::Catch2WithMain)
 

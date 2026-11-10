@@ -1,4 +1,4 @@
-# pragma once
+#pragma once
 
 #include "orbprop/state.hpp"
 
@@ -7,7 +7,7 @@ namespace orbprop {
 // f is any callable with signature State f(double t, const State& y)
 // that returns dy/dt.
 template <typename F>
-State Rk4State(const State& y, double t, double h, F f)
+State Rk4Step(const State& y, double t, double h, F f)
 {
     const State k1 = f(t, y);
     const State k2 = f(t + 0.5 * h, y + (0.5 * h) * k1);
@@ -21,11 +21,8 @@ template <typename F>
 State PropagateRk4(const State& y0, double t0, double h, int n_steps, F f) {
     State y = y0;
     for (int i = 0; i < n_steps; ++i) {
-        State y = y0;
-        for (int i = 0; i < n_steps; ++i) {
-            y = Rk4Steps(y, t0 + i * h, h, f);
-        }
-        return y;
+        y = Rk4Step(y, t0 + i * h, h, f);
     }
+    return y;
 }
 } // namespace orbprop

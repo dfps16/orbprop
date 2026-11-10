@@ -17,4 +17,12 @@ namespace orbprop {
     // Time derivative of the state under point-mass gravity:
     // d/dt (r, v) = (v, -mu r / |r|^3).
     State TwoBodyDerivative(const State& s, double mu);
+
+    // Specific orbital energy v^2 / 2 - mu / |r|
+    // Constant under two-body motion.
+    double SpecificEnergy(const State& s, double mu);
+
+    // Specific angular momentum r x v 
+    // Constant under two-body motion.
+    Vec3 SpecificAngularMomentum(const State& s);
 } // namespace orbprop
