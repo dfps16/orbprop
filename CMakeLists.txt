@@ -10,6 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # --- The library: all propagator code lives here ----------------------
 add_library(orbprop
     src/dynamics.cpp
+    src/kepler.cpp
 )
 target_include_directories(orbprop PUBLIC include)
 target_compile_options(orbprop PRIVATE -Wall -Wextra -Wpedantic)
